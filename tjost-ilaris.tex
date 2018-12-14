@@ -1,0 +1,263 @@
+\documentclass[12pt,div=calc,a5paper,parskip=half]{scrartcl}
+\usepackage[T1]{fontenc}
+\usepackage{AlegreyaSans} %% Option 'black' gives heavier bold face
+\usepackage{Alegreya} %% Option 'black' gives heavier bold face 
+\renewcommand*\oldstylenums[1]{{\AlegreyaOsF #1}}
+\usepackage[utf8]{inputenc}
+\usepackage[ngerman]{babel}
+\usepackage{microtype}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{xspace}
+\usepackage{booktabs}
+\usepackage[usenames,dvipsnames,table]{xcolor}
+\usepackage{mdframed}
+\usepackage{tabularx}
+\usepackage[autostyle=true,german=quotes]{csquotes}
+\usepackage{hyperref}
+\addtokomafont{date}{\small}
+\addtokomafont{author}{\small}
+\hypersetup{
+    colorlinks,
+    linkcolor={red!50!black},
+    citecolor={blue!50!black},
+    urlcolor={blue!80!black}
+}
+\begin{document}
+
+
+\title{Tjost in Ilaris\footnote{\url{https://ilarisblog.wordpress.com/}}}
+\subtitle{Eine inoffizielle Spielhilfe}
+\author{Jan Sürmeli}
+\date{}
+\titlehead{\raggedleft\includegraphics[width=2cm]{ilaris-kit-logo}}
+\maketitle
+\rowcolors{1}{gray!30}{gray!10}
+\newenvironment{desc}{\begin{mdframed}\itshape\sffamily}{\end{mdframed}}
+\newenvironment{probe}{\centering\sffamily}{}
+\newcommand{\talent}[2]{\textsf{#1} [\textsf{#2}]}
+\newcommand{\val}[1]{\textsf{\textbf{#1}}}
+\newcommand{\man}[1]{\textsf{#1}\xspace}
+\newcommand{\vorteil}[1]{\textsf{#1}\xspace}
+
+\newcommand{\modAT}{\val{modAT}\xspace}
+\newcommand{\modVT}{\val{modVT}\xspace}
+\newcommand{\gp}{\val{GunstP}\xspace}
+
+\newcommand{\wsstern}{{$\val{WS}^*$}}
+
+\section{Ablauf}
+
+In der Tjost misst Du Deine Kräfte in mehreren Runden mit Deiner Gegnerin.\footnote{In dieser Spielhilfe wird stets die weibliche Form verwendet. Dies soll explizit Angehörige beliebigen Geschlechts einschließen. Auf ein weiteres Gendering wird zugunsten der Lesbarkeit verzichtet.} In jeder Runde reitet Ihr aufeinander zu und versucht die jeweils andere empfindlich zu treffen oder gar aus dem Sattel zu werfen. Je nach Ausgang erhaltet Ihr dafür Punkte vom Punktrichter. Die Tjost endet normalerweise dadurch, dass eine vorher festgelegte Punktzahl erreicht wird oder eine von Euch aufgibt oder kampfunfähig wird. 
+
+Jede Runde ist in drei Phasen aufgeteilt: In der ersten Phase stürmt Ihr aufeinander zu, wobei Ihr versucht, Euch optimal auf den sehr kurzen Schlagabtausch in Phase~2 vorzubereiten. In Phase~3 werden die Punkte vergeben, Ihr rüstet Euch für den nächsten Ansturm. 
+
+Das Publikum spielt eine entscheidende Rolle: Wer die Gunst des Publikums hat, wird durch ihr Anfeuern zu besonderen Taten angepeitscht. Spieltechnisch wird dies durch \emph{Gunstpunkte} abgebildet. 
+
+
+
+
+\section{Gunstpunkte}
+
+Deine \emph{Gunstpunkte} (\gp) stellen abstrakt deinen Rückhalt im Publikum dar. Der Erhalt eines Gunstpunktes bedeutet gewachsene Anerkennung durch das Publikum. Die Ausgabe eines Gunstpunktes bedeutet nicht, dass Du die Gunst des Publikums verloren hast -- Du hast den moralischen Beistand lediglich dafür genutzt, besser im Wettkampf zu bestehen. Der aktuelle Stand an \gp ist also kein Maß dafür, wie hoch Du im Kurs stehst -- eher, wie viel Du gerade noch aus der Zuneigung des Publikums schöpfen könntest. 
+
+Gunstpunkte (\gp) ähneln technisch Schicksalspunkten. Sie können wie folgt eingesetzt werden: 
+\begin{itemize}
+    \item Die Anzahl Einschränkungen (auch am Schild) wird halbiert. Dabei wird ausnahmsweise abgerundet. Dies gilt auch für Einschränkungen, die aus Stürzen resultieren.
+    \item Ein beliebiger Wurf kann wiederholt werden. Bei einem AT- oder VT-Patzer erfordert dies zwei \gp.
+    \item Durch den Einsatz von 2 \gp kann ein Sturz verhindert werden. 
+    \item Durch den Einsatz von 3 \gp können für eine vollständige Runde die Wundabzüge ignoriert werden (vgl. Vorteil \vorteil{kalte Wut}). Dies musst Du in Phase~1 ansagen. In Phase~3 erhältst Du einen \gp zurück. 
+\end{itemize}
+
+Der Startwert für \gp wird von der Meisterin festgelegt. Hast Du den Vorteil \vorteil{Eindrucksvoll I/II} startest Du mit 1 bzw. 2 zusätzlichen \gp. Andere Vorteile wie \vorteil{Gesellschaftsgewandt I/II} können nach Meisterentscheid ebenfalls positive Effekte haben.
+
+\gp können auf unterschiedliche Weise in der Tjost gewonnen werden. Hier ein Überblick:
+\begin{itemize}
+    \item Phase~1: beim Ansturm, durch freiwilliges Erschweren der Ansturm-Probe 
+    \item Phase~2: ein Triumph bei Angriff oder Verteidigung -- oder einem Patzer deiner Gegnerin.
+    \item Phase~2: beim optionalen Spiel mit Wundschmerzeffekten: der Angreiferin oder die Verteidigerin -- je nach Ausgang der Gegenprobe
+    \item Phase~3: beim regenerieren anstatt der Regeneration eines Punktes Erschöpfung
+\end{itemize}
+
+Es ist Meisterentscheid, ob übrig gebliebene \gp aus vorherigen Tjosten in neue Tjoste mitgenommen werden können. 
+
+\paragraph{Gunstpunkte vs. Schicksalspunkte} Ein gleichzeitiger Einsatz von Gunstpunkten und Schicksalspunkten ist nur bei expliziter Meistererlaubnis möglich. Optional kann die Meisterin auch erlauben, dass ein Schicksalspunkt ausgegeben werden kann, um direkt einen \gp zu erhalten. 
+
+\section{Stürze}
+
+Wenn Du vom Pferd stürzt, erhältst Du Schaden als würdest Du aus zwei Schritt Höhe stürzen (normalerweise 2w6 Schadenspunkte, vgl. Ilaris-Regeln Seite 45). Du musst sich außerdem in Phase~3 für die nächste Runde bereit machen, anstatt zu regenerieren. Im Gegensatz zu den in der Tjost üblichen Angriffen mit stumpfen Waffen richtet ein Sturz vom Pferd höchst realen Schaden an -- Du musst hier potenziell mit Wunden rechnen. Insbesondere ist zu beachten, dass der Rüstungsschutz bei einem Sturz nicht hilft -- Stürze richten \val{SP} anstatt \val{TP} an und werden direkt mit der \val{WS} anstatt der \val{WS*} verglichen. 
+
+\section{Phasen}
+Jede Runde einer Tjost ist in vier Phasen eingeteilt. 
+
+\subsection{Phase~1: Der Ansturm}
+
+\begin{desc}
+    Ihr stürmt aufeinander zu. Dabei versucht Ihr Euch optimal auf das Zusammentreffen einzurichten oder die Gunst des Publikums zu erhalten. 
+\end{desc}
+
+\subsubsection{Vorbereitung: Wundabzüge ignorieren?}
+
+\begin{desc}
+Dieser Schmerz in der rechten Schulter, ich konnte die Lanze kaum greifen, als mein Knappe sie mir reichte. Aber die Rufe des Publikums\dots Ist das etwa mein Name? Beiß die Zähne zusammen, Alrike!
+\end{desc}
+
+Falls Du in dieser Runde Wundabzüge ignorieren möchtest, ist jetzt der richtige Zeitpunkt, es anzusagen. Neben den üblichen Möglichkeiten aus Ilaris (z.B. Vorteil \vorteil{Kalte Wut}) kannst Du stattdessen auch drei \gp ausgeben, um für diese Runde Wundabzüge zu ignorieren. Du erhältst dafür einen \gp in Phase~3 zurück.
+
+\subsubsection{Der Ansturm}
+\begin{desc}
+    Dein Pferd prescht vorwärts, alles fliegt an Dir vorbei\dots Was jetzt? Ein besonders harter Lanzenstoß? Eine gekonnte Parade? Oder doch die Gunst des Publikums mit einer eleganten Geste gewinnen?
+\end{desc}
+
+Im Mittelpunkt des Ansturms steht eine \emph{Ansturmprobe}. Vor (!) dem Wurf kannst Du entscheiden, dass Du Dir die Ansturmprobe erschwerst, um dafür \gp zu erhalten. Pro Erschwerung um $4$ erhältst Du einen \gp. 
+
+Dein Probenwert für den Ansturm ist die Summe aus Deinem Probenwert für \talent{Reiten}{Athletik} und Deiner \val{Ini}. Dabei wird die \val{BE} (wie üblich) auf \talent{Reiten}{Athletik} eingerechnet -- mit dem Vorteil \vorteil{Reiterkampf II} kannst Du die \val{BE} für diese Probe ignorieren. Andere Umstände wie beispielsweise ein besonders gutes Pferd können nach Meisterentscheid Deinen Probenwert modifizieren. 
+
+Die Meisterin legt für diese Runde die \val{Granularität} (2, 4 oder 8) fest.\footnote{Diese Auswahl kann global für alle Turniere, für ein bestimmtes Turnier, oder nach \emph{Rule of Drama} in jeder Runde festgelegt werden} 
+
+Nun legst Du eine Ansturmprobe ab (evtl. erschwert, um \gp zu erwerben, s.o.). Der Ergebniswert führt zu Deinem Modifikator (Bonus bzw. Malus) für diese Runde, der nach folgender Formel berechnet wird:
+\begin{equation*}
+\val{Modifikator} = \frac{\val{Granularität}}{2} \cdot \mathrm{Abrunden}\left(\frac{\val{Ergebniswert} - 16}{\val{Granularität}}\right) 
+\end{equation*}
+Dabei wird der Betrag (!) abgerundet, d.h. aus einer $2{,}7$ wird eine $2$, aus einer $-2{,}7$ wird eine $-2$. Beispiele finden sich in Tabelle~\ref{tbl:ph1:bonus}. 
+
+Den Bonus bzw. Malus kannst Du jetzt nach Belieben auf die Werte \modAT und \modVT aufgeteilt -- je nach dem, ob Du Dich in dieser Runde stärker auf Angriff oder Verteidigung konzentrieren möchtest. Diese Modifikatoren gelten nur für Diese Runde. Du kannst insbesondere keine Punkte \enquote{übrig behalten} für die nächste Runde.
+
+\begin{table}[h]
+    \centering\small
+\begin{tabular}{rrrr}
+   \textbf{Ergebnis} & \textbf{Granularität 2} & \textbf{Granularität 4} & \textbf{Granularität 8}\\
+   0 & -8 & -8 & -8\\
+   2 & -7 & -6 & -4\\
+   4 & -6 & -6 & -4\\
+   6 & -5 & -4 & -4\\
+   8 & -4 & -4 & -4\\
+   10 & -3 & -2 & 0\\
+   12 & -2 & -2 & 0\\
+   14 & -1 & 0 & 0\\
+   16 & 0 & 0 & 0\\
+   18 & +1 & 0 & 0\\
+   20 & +2 & +2 & 0\\
+   22 & +3 & +2 & 0\\
+   24 & +4 & +4 & +4\\
+   26 & +5 & +4 & +4\\
+   28 & +6 & +6 & +4\\
+   30 & +7 & +6 & +4\\
+   32 & +8 & +8 & +8\\
+\end{tabular}
+\caption{Phase~1 -- Bonus/Malus nach Ergebnis der Reitenprobe}
+\label{tbl:ph1:bonus}
+\end{table}
+
+\subsection{Phase~2: Der Aufprall}
+
+Der Aufprall passiert theoretisch simultan. Praktisch wird die Phase dennoch hintereinander abgehandelt, wobei Du einmal in die offensive und einmal in die defensive Rolle schlüpfst. Alle Konsequenzen (Wundabzüge, Entwaffnung, Sturz, \dots) kommen jedoch erst nach dem Aufprall zum Tragen. 
+
+\subsubsection{Vorbereitung: Waffen, Kampfstil, Manöver auswählen}
+Du legst jetzt fest, wie Du in dieser Runde kämpfen möchtest. Hast Du die niedrigere \val{Ini} von Euch beiden, musst Du zuerst ansagen: 
+\begin{description}
+    \item[Waffe/AT-Talent] Je nach erlaubten Waffen legst Du fest, mit welcher Waffe und somit mit welchem AT-Talent Du kämpfen möchtest. Im Normalfall ist das \talent{Lanzenreiten}{Stabwaffen}. Möchtest Du in der nächsten Runde mit einer anderen Waffe kämpfen, musst Du Dich in Phase~3 dafür bereit machen. 
+    \item[Kampfstil] Du legst Deinen Kampfstil fest. In Frage kommen nach Ilaris-Regeln nur \vorteil{Schildkampf} und \vorteil{Reiterkampf}. Möchtest Du in der nächsten Runde mit einem anderen Kampfstil kämpfen, musst Du Dich in Phase~3 dafür bereit machen.
+    \item[AT-Manöver auswählen] Falls Du Deinen Angriff mit einem oder mehreren Manövern verstärken möchtest, wähle jetzt Deine AT-Manöver aus. Du kannst dabei aus der folgenden Liste wählen -- mit einem Stern versehene Manöver haben eine geänderte Wirkung, siehe Anhang: 
+    \begin{description}
+        \item[Basismanöver] \man{Entwaffnen*}, \man{gezielter Schlag}, \man{Wuchtschlag}.  
+        \item[Aufbauende Manöver] \man{Niederwerfen*}, \man{Schildspalter}.
+    \end{description}
+    Die Meisterin kann weitere Manöver erlauben, wie beispielsweise \man{Hammerschlag} oder \man{Todesstoß}, doch da sich die Tjost von einem echten Kampf unterscheidet, sind diese normalerweise nicht vorgesehen.  
+    \item[Sturmangriff-Bonus] Hast Du normalerweise das Manöver \man{Sturmangriff} zur Verfügung (durch den Vorteil \vorteil{Sturmangriff} oder den Kampf im Stil \vorteil{Reiterkampf}), gereicht Dir dies auch bei der Tjost zum Vorteil. Du erhält einen Bonus von +4 auf Deine \val{AT}. Du kannst außerdem die \val{GS} (galoppierend) Deines Reittiers auf den Schaden addieren.  
+    \item[AT-Wert] Aus \val{WM}, Probenwert des Kampftalents, Modifikatoren aus Manövern, \val{BE}, Sturmangriff-Bonus und \modAT ergibt sich Dein AT-Wert für diese Runde. 
+    \item[VT-Talent auswählen] Du wählst aus, wie Du Dich diese Runde verteidigen möchtest. Normalerweise versucht Du, den Angriff mit dem Schild abzuwehren (Talent \talent{Schilde}{Handgemengewaffen}), doch theoretisch sind auch andere Kampftalente möglich. Bei einer Verteidigung mit dem Talent \talent{Unbewaffnet}{Handgemengewaffen} musst Du ausweichen anstatt nur zu parieren, daher sind Verteidigungen mit diesem Talent pauschal um zwei erschwert.\footnote{In Ilaris wird dies durch das VT-Manöver \man{Ausweichen} abgebildet. In der Tjost gibt es jedoch keine VT-Manöver, daher der pauschale Abzug.}
+    \item[VT-Wert] Aus gewähltem VT-Talent, \val{WM}, \val{BE} und \modVT ergibt sich Dein VT-Wert für diese Runde. 
+\end{description}
+
+\subsubsection{Angriff und Verteidigung}
+Wie im üblichen Kampf wird eine vergleichende AT vs. VT-Probe durchgeführt.\footnote{Wer bei Gleichstand gewinnt, ist Entscheidung der Meisterin. Ilaris schlägt vor, dass stets die Spielerin gewinnt.} 
+
+\paragraph{Wenn Du angreifst} Gewinnst Du die vergleichende Probe, landest Du einen \emph{Treffer}. Wie in den Ilaris-Regeln gilt:
+\begin{itemize}
+\item Hast Du das Manöver \man{gezielter Schlag} verwendet, triffst Du die vorher ausgewählte Trefferzone. Ansonsten wird eine Trefferzone ausgewürfelt. 
+\item Hast Du das Manöver \man{Schildspalter} verwendet, triffst Du stattdessen den gegnerischen Schild.
+\end{itemize}
+Hast Du einen Treffer gelandet, bestimme den Schaden entsprechend den Ilaris-Regeln: Auf den Waffenschaden werden eventuelle Boni aus hoher KK, Kampfstilen, Manövern etc. addiert. Da es sich bei Turnieren normalerweise um stumpfe Waffen handelt, werden keine Wunden sondern stattdessen Punkte Erschöpfung angerichtet. 
+
+\paragraph{Wenn Du verteidigst}
+Wenn Du die vergleichende Probe gewinnst, entgehst Du dem Angriff. Solltest Du sie jedoch verlieren, kassierst Du einen Treffer und damit Schaden. Vergleiche den Schaden (\val{TP}) mit Deiner \wsstern bzw. der \val{Härte} Deines Schildes. Daraus kannst Du die Anzahl an Einschränkungen (Erschöpfungen bzw. Beschädigungen) ableiten. 
+
+\paragraph{Triumphe/Patzer} Die Regeln für Triumphe und Patzer sind bei der Tjost anders als bei üblichen Kämpfen. Ist ein Triumph auf dem Schlachtfeld meist eine Einladung für ein schnelles Manöver, gewinnt ein Triumph hier die Herzen des Publikums. Wenn Du bei Angriff oder Verteidigung triumphierst (normalerweise geworfene 20 und Erfolg), erhältst Du einen \gp (ein weiteres Manöver kann nicht angesagt werden). Wenn Du patzt (normalerweise geworfene 1 und Misserfolg), erhält stattdessen Deine Gegnerin einen \gp. Beides kann gleichzeitig eintreffen -- wer triumphiert erhält dann sogar (insgesamt) zwei \gp.  
+
+\paragraph{Optional: Wundschmerzeffekte}
+In Ilaris werden normalerweise keine Wundschmerzeffekte bei Erschöpfung angewendet. Um den Kampf spektakulärer zu gestalten, kann folgende Regel verwendet werden: Wenn Du zwei oder mehr Punkte Erschöpfung auf einen Schlag kassierst, wird zunächst eine Gegenprobe fällig, die sich nach der Trefferzone richtet. Gelingt Dir die Gegenprobe, erhältst Du für diese Leistung sofort einen \gp! Ansonsten erhält Deine Gegnerin einen \gp und Dich erwarten weitere Konsequenzen (vgl. Tabelle~\ref{tbl:ph2:wundschmerz}).
+
+\begin{table}[h]
+\centering\small
+    \begin{tabularx}{\textwidth}{lX}
+        \textbf{Zone/Gegenprobe} &  \textbf{Misserfolg} \\
+        Beine (1), \val{GE} & Du wirst aus dem Sattel gehoben oder das Pferd scheut, Du stürzt vom Pferd und musst dich in Phase~3 bereit machen.\\
+        Arme (2-3), \val{KK} & der Arm ist von dem Schlag betäubt, Lanze bzw. Schild fällt zu Boden falls nicht befestigt. Du musst Dich in Phase~3 bereit machen, um Schild/Lanze neu zu richten/anzubringen.\\
+        Bauch/Brust (4-5), \val{KO} & Du erhältst einen weiteren Punkt Erschöpfung.\\
+        Kopf (6), \val{MU} & Du sieht für einen Moment Sterne und musst sich in Phase~3 bereit machen.\\ 
+    \end{tabularx}
+    \caption{Phase~2 -- Wundschmerzeffekte}
+    \label{tbl:ph2:wundschmerz}
+\end{table}
+
+\paragraph{Kampfunfähigkeit} Wie in einem normalen Kampf wirst Du bei fünf Einschränkungen kampfunfähig; um bei Bewusstsein (und im Sattel) zu bleiben, kannst Du -- wie in den Ilaris-Regeln beschrieben -- eine Zähigkeitsprobe notwendig. 
+
+\subsection{Phase~3: Punktevergabe, Neuaufstellung}
+
+\subsubsection{Punktevergabe und ggf. Ende der Tjost}
+Auf Basis der Geschehnisse dieser Runde werden Punkte wie folgt vergeben:
+\begin{itemize}
+    \item Hast Du einen Kopftreffer gelandet und dabei wenigstens einen Punkt Erschöpfung angerichtet, erhältst Du einen Punkt. 
+    \item Hast Du einen Schildtreffer angerichtet und dabei wenigstens eine Beschädigung angerichtet, erhältst Du einen Punkt.
+    \item Konntest Du Deine Gegnerin aus dem Sattel stoßen, erhältst Du zwei Punkte.  
+\end{itemize}
+Sollte eine von Euch das Bewusstsein verlieren, endet die Tjost sofort. Je nachdem wie von der Meisterin vorher festgelegt, zählt dann ein Sieg durch K.O. oder nach Punkten. 
+
+Sollte jetzt wenigstens eine von Euch die erforderliche Punktzahl erreicht haben, wird in dieser Reihenfolge überprüft, ob die Tjost gewonnen wurde: 
+\begin{enumerate}
+    \item Eine von Euch hat mehr Punkte als die andere.
+    \item Eine von Euch ist im Sattel, die andere am Boden.
+\end{enumerate}
+Sollte eine von Euch als Siegerin feststehen, endet die Tjost sofort. Ansonsten geht es weiter.
+
+\subsubsection{Bereit machen bzw. Regeneration}
+Bevor Du Dich für die neue Runde aufstellst, bereitest Du Dich darauf vor. 
+
+In einigen Fällen, musst Du Dich dazu explizit \emph{bereit machen}: 
+\begin{itemize}
+    \item Du möchtest Deine Waffe oder Deinen Kampfstil wechseln. 
+    \item Du musst neu aufsteigen. 
+    \item Ein Wundschmerzeffekt zwingt Dich dazu.
+\end{itemize}
+
+Musst Du Dich nicht bereit machen, kannst Du die Zeit nutzen, um durchzuschnaufen oder mit dem Publikum zu interagieren. Du darfst einen Punkt Erschöpfung regenerieren oder alternativ einen \gp erhalten. 
+
+\subsubsection{Wundabzüge ignoriert?}
+Hattest Du in ideser Runde Deine Wundabzüge ignoriert (vgl. Phase~1), erhältst Du jetzt einen \gp zurück.
+
+\subsubsection{Neuaufstellung}
+Die Runde endet und die nächste Runde beginnt erneut mit Phase~1. 
+
+\section{Anhang: Modifizierte Manöver}
+\begin{description}
+    \item[Entwaffnen (AT -4)] Der Angriff richtet keinen Schaden an. Misslingt Deiner Gegnerin eine \val{KK}-Gegenprobe, muss dieser sich in Phase~3 bereit machen. 
+    \item[Niederwerfen (AT -4)] Misslingt Deiner Gegnerin eine \val{KK}-Gegenprobe, stürzt dieser vom Pferd und muss sich in Phase~3 bereit machen. Erfordert den Vorteil \vorteil{Niederwerfen}. 
+\end{description}
+
+\section{Anhang: Zufallsereignisse}
+Ein übersehenes Schlammloch, ein strauchelndes Pferd, eine plötzliche Böe oder ein aus dem Publikum geworfener Gegenstand -- vieles kann selbst eine erfahrene Reiterin aus der Fassung bringen. Aber auch ein sich plötzlich herum sprechendes Gerücht über eine der Reiterinnen, eine aufmunternde Nachricht von einer Freundin (überbracht von einer Knappin) können den Wettkampf in die eine oder andere Richtung beeinflussen. 
+
+Der Eintritt solcher Zufallsereignisse sollte immer Meisterentscheid sein. Wenn es nicht besondere Gründe dafür gibt, sollte es immer möglich sein, einem negativen Ereignis mit einer Probe (v.a. Reiten) zu entgehen. 
+
+Dies ist in der Tjost vermutlich auch eine der passendsten Gelegenheiten, Eigenheiten auszuspielen: Wenn das Publikum Spottnamen auf Stolze oder Jähzornige singt kann dies sicher einen besonderen Einfluss auf den Kampf haben. Die eine oder andere lässt sich möglicherweise zu einer obszönen Geste hinreißen und kann sicher sein, für die nächsten paar Runden keine \gp mehr zu erhalten\dots
+
+\end{document}
+
+
+
+
+
+
+
+
